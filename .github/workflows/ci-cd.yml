@@ -1,7 +1,7 @@
 name: Conditional Pipeline on Label frontend
 
 on:
-  pull_request:
+  push:
     types: [labeled]
 
 jobs:
