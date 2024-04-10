@@ -5,3 +5,4 @@ This project is a web platform developed for tourists to decide where they would
 ## Contributors
 
 - Antônio Hideto Borges Kotsubo - 236041
+- Gabriel Alves de Arruda - 248132
