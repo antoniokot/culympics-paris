@@ -6,3 +6,4 @@ This project is a web platform developed for tourists to decide where they would
 
 - Antônio Hideto Borges Kotsubo - 236041
 - Gabriel Alves de Arruda - 248132
+- Guilherme Brentan de Oliveira - 252764
