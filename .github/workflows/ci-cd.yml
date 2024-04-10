@@ -1,5 +1,4 @@
-yaml
-name: Conditional Pipeline on Label
+name: Conditional Pipeline on Label frontend
 
 on:
   pull_request:
