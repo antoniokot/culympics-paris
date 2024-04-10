@@ -1,5 +1,5 @@
 CREATE TABLE restaurants (
-    id SERIAL PRIMARY KEY,
+    id UUID PRIMARY KEY NOT NULL,
     country VARCHAR(100),
     name VARCHAR(100),
     address VARCHAR(255),
