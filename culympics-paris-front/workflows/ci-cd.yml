@@ -15,9 +15,6 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Navigate to project directory
-        run: cd culympics-paris-front
-
     - name: Install Dependencies
       run: npm install
 
