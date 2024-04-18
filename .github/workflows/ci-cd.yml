@@ -2,9 +2,6 @@ name: Conditional Pipeline on Label frontend
 
 on:
   push:
-    branches:
-      -main
-      -develop
 
 jobs:
   build-and-test:
@@ -17,6 +14,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '20'
+
+    - name: Navigate to project directory
+        run: cd culympics-paris-front
 
     - name: Install Dependencies
       run: npm install
