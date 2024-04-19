@@ -1,13 +1,7 @@
 name: Conditional Pipeline on Label frontend
 
 on:
-  push:
-    branches:
-    - master
   pull_request:
-    branches:
-    - master
-    - develop
 
 jobs:
   build-and-test:
