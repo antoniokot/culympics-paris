@@ -3,6 +3,13 @@ name: FrontEnd pipeline
 on:
   pull_request:
     types: [opened, synchronize]
+    branches:
+    - main
+    = develop
+  push:
+    branches:
+    - main
+    - develop
 
 jobs:
   debug-vars:
