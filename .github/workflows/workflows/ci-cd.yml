@@ -1,4 +1,4 @@
-name: Conditional Pipeline on Label frontend
+name: FrontEnd pipeline
 
 on:
   pull_request:
