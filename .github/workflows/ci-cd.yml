@@ -5,6 +5,14 @@ on:
     types: [opened, synchronize]
 
 jobs:
+  debug-vars:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Debug Event
+          run: echo "${{ toJson(github.event) }}"
+        - name: Debug Pull Request
+          run: echo "${{ toJson(github.event.pull_request) }}"
+
   build-and-test:
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'frontend')
