@@ -1,3 +1,24 @@
+import {
+  HomeContainer,
+  ContentContainer,
+  Content,
+  Titel,
+  Description,
+  ImageContainer,
+} from './styles'
+
 export function Home() {
-  return <h1>Home2</h1>
+  return (
+    <HomeContainer>
+      <ContentContainer>
+        <Content>
+          <Titel>Welcome to Culympics</Titel>
+          <Description>
+            A web platform design for helping you to find your next meal
+          </Description>
+        </Content>
+      </ContentContainer>
+      <ImageContainer />
+    </HomeContainer>
+  )
 }

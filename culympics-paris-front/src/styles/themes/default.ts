@@ -5,6 +5,9 @@ export const defaultTheme = {
   primary: '#FF204E',
   secondary: '#9B0045',
 
+  beige: '#AF8260',
+  brown: '#803D3B',
+
   'gray-100': '#E1E1E6',
   'gray-300': '#C4C4CC',
   'gray-400': '#8D8D99',
