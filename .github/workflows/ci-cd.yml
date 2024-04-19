@@ -4,12 +4,13 @@ on:
   pull_request:
     types: [opened, synchronize]
     branches:
-    - main
-    = develop
+      - main
+      - develop
   push:
     branches:
-    - main
-    - develop
+      - main
+      - develop
+
 
 jobs:
   debug-vars:
