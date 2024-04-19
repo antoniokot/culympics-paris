@@ -1,0 +1,34 @@
+name: Conditional Pipeline on Label frontend
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  debug-vars:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Debug Event
+          run: echo "${{ toJson(github.event) }}"
+        - name: Debug Pull Request
+          run: echo "${{ toJson(github.event.pull_request) }}"
+
+  build-and-test:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'frontend')
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Unit Tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
