@@ -2,6 +2,7 @@ name: Conditional Pipeline on Label frontend
 
 on:
   pull_request:
+    types: [opened, synchronize]
 
 jobs:
   build-and-test:
