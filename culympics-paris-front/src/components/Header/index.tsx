@@ -1,17 +1,11 @@
-import { HeaderContainer, ExploreButton } from './styles'
+import { HeaderContainer } from './styles'
 
-import { NavLink } from 'react-router-dom'
-
-import culympicsLogo from '../../assets/culympics-logo.svg'
+import culympicsIcon from '../../assets/culympics-icon.svg'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <img width={200} height={70} src={culympicsLogo} alt="Culympics Logo" />
-
-      <NavLink to="/">
-        <ExploreButton>Explore</ExploreButton>
-      </NavLink>
+      <img width={80} height={40} src={culympicsIcon} alt="Culympics Logo" />
     </HeaderContainer>
   )
 }

@@ -1,24 +1,32 @@
 import {
   HomeContainer,
-  ContentContainer,
-  Content,
-  Titel,
-  Description,
   ImageContainer,
+  WelcomeContainer,
+  Welcome,
+  ContentContainer,
+  AboutUs,
+  Description,
+  ExploreButton,
 } from './styles'
 
 export function Home() {
   return (
     <HomeContainer>
+      <ImageContainer>
+        <WelcomeContainer>
+          <Welcome>Welcome to Culympics</Welcome>
+        </WelcomeContainer>
+      </ImageContainer>
       <ContentContainer>
-        <Content>
-          <Titel>Welcome to Culympics</Titel>
+        <AboutUs>
+          <h1>About us</h1>
           <Description>
-            A web platform design for helping you to find your next meal
+            Culympics is a web platform design by college students to help our
+            users to find their next culinary experience.
           </Description>
-        </Content>
+        </AboutUs>
+        <ExploreButton>EXPLORE</ExploreButton>
       </ContentContainer>
-      <ImageContainer />
     </HomeContainer>
   )
 }
