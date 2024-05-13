@@ -4,52 +4,127 @@ import homeImage from '../../assets/home-image.jpg'
 
 export const HomeContainer = styled.div`
   width: 100%;
-  height: 100%;
-
-  display: flex;
-`
-
-export const ContentContainer = styled.main`
-  width: 50%;
-
-  flex: 1;
 
   display: flex;
   flex-direction: column;
+  gap: 4em;
 `
 
-export const Content = styled.div`
-  position: absolute;
-  left: 2.5%;
-  bottom: 10%;
+export const ImageContainer = styled.div`
+  position: relative;
 
-  max-width: 42rem;
-
-  flex-wrap: wrap-reverse;
-`
-
-export const Titel = styled.h1`
-  font-size: 6rem;
-  font-weight: 500;
-
-  margin-bottom: 4rem;
-`
-
-export const Description = styled.div`
-  font-size: 2rem;
-  font-weight: 200;
-
-  margin-bottom: 4rem;
-`
-
-export const ImageContainer = styled.aside`
-  max-width: 45rem;
-
-  flex: 1;
+  width: 100%;
+  height: 100vh;
 
   display: flex;
+  flex-direction: column;
 
   background-image: url(${homeImage});
   background-position: center;
   background-size: cover;
+
+  /* Adding a pseudo-element to serve as an overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${(props) => props.theme.black};
+    opacity: 0.6;
+
+    z-index: 1; /* Ensures the overlay is above the background image but below the content */
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Aligns the shadow at the bottom */
+    height: 30%; /* Adjust this value to control the height of the fade effect */
+    background: linear-gradient(
+      to bottom,
+      rgba(12, 12, 12, 0) 0%,
+      ${(props) => props.theme.black} 100%
+    );
+    z-index: 2; /* Ensures the shadow is above the background and the dark overlay */
+  }
+`
+
+export const WelcomeContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  align-items: center;
+  text-align: center;
+
+  z-index: 2; /* Ensures content is above the overlay */
+`
+
+export const Welcome = styled.h1`
+  color: ${(props) => props.theme.white};
+  font-size: 7rem;
+  font-weight: 300;
+`
+
+export const ContentContainer = styled.div`
+  position: relative; /* This ensures that the content is positioned relative to its parent and above the overlay */
+
+  width: 100%;
+  height: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  z-index: 2; /* Ensures content is above the overlay */
+`
+
+export const AboutUs = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 20rem;
+
+  text-align: center;
+
+  > h1 {
+    font-size: 2rem;
+    font-weight: 300;
+
+    margin-bottom: 2rem;
+  }
+`
+
+export const Description = styled.div`
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.6;
+`
+
+export const ExploreButton = styled.button`
+  width: 10rem;
+  height: 4rem;
+
+  color: ${(props) => props.theme.white};
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  background: none;
+
+  border: 1px solid ${(props) => props.theme.white};
+  border-radius: 4px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: 0.2s;
+
+  &:hover {
+    background: ${(props) => props.theme['gray-900']};
+  }
 `
