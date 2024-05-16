@@ -17,11 +17,13 @@ interface CardProps {
 export function RestaurantCard({ name, imageURL, address, rating }: CardProps) {
   return (
     <CardConteiner>
-      <Banner imageURL={imageURL} />
+      <Banner src={imageURL} />
       <InfoConteiner>
         <Name>{name}</Name>
         <Address>{address}</Address>
-        <Rating>{rating}</Rating>
+        <Rating>
+          <b>{rating}</b> stars
+        </Rating>
       </InfoConteiner>
     </CardConteiner>
   )

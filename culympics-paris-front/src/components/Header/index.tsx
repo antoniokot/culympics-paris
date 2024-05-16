@@ -3,9 +3,8 @@ import { NavLink } from 'react-router-dom'
 import {
   HeaderContainer,
   Navbar,
-  CategoryConteiner,
-  CategoryButton,
   SearchConteiner,
+  Dropdown,
   SearchBar,
   IconConteiner,
 } from './styles'
@@ -19,18 +18,16 @@ export function Header() {
       <Navbar>
         <img width={200} height={60} src={culympicsLogo} alt="Culympics Logo" />
 
-        <CategoryConteiner>
-          <CategoryButton>Restaurants</CategoryButton>
-          <CategoryButton>Cuisines</CategoryButton>
-          <CategoryButton>Cuisines</CategoryButton>
-        </CategoryConteiner>
-
         <NavLink to="/">
           <House size={30} />
           <span>Home</span>
         </NavLink>
       </Navbar>
       <SearchConteiner>
+        <Dropdown>
+          <option value="restaurants">Restaurants</option>
+          <option value="cuisines">Cuisines</option>
+        </Dropdown>
         <SearchBar placeholder="Which restaurant are you looking for today?" />
         <IconConteiner>
           <MagnifyingGlass size={20} />

@@ -67,7 +67,7 @@ export const WelcomeContainer = styled.div`
 
 export const Welcome = styled.h1`
   color: ${(props) => props.theme.white};
-  font-size: 7rem;
+  font-size: 8rem;
   font-weight: 300;
 `
 

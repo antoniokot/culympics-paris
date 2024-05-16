@@ -10,17 +10,13 @@ export const CardConteiner = styled.div`
   border-radius: 10px;
 `
 
-interface BannerProps {
-  imageURL: string
-}
+export const Banner = styled.img`
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* New property to maintain aspect ratio as a square */
 
-export const Banner = styled.div<BannerProps>`
-  flex: 1;
-
-  background: url(${(props) => props.imageURL});
-  background-size: cover;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-radius: 8px;
+  object-fit: cover; /* This will ensure the image covers the square area without distortion */
 `
 
 export const InfoConteiner = styled.div`
@@ -37,19 +33,21 @@ export const InfoConteiner = styled.div`
 
 export const Name = styled.span`
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
 
-  margin-top: 4px;
+  margin-top: 1rem;
 `
 
 export const Address = styled.span`
-  font-size: 0.9rem;
+  color: ${(props) => props.theme['gray-700']};
+  font-size: 1rem;
   font-weight: 300;
 
-  margin-top: 4px;
+  margin-top: 0.25rem;
 `
 
 export const Rating = styled.span`
-  font-size: 0.9rem;
-  font-weight: 300;
+  font-size: 1rem;
+
+  margin-top: 0.25rem;
 `
