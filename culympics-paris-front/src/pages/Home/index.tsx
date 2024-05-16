@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 import {
   HomeContainer,
   ImageContainer,
@@ -6,7 +8,6 @@ import {
   ContentContainer,
   AboutUs,
   Description,
-  ExploreButton,
 } from './styles'
 
 export function Home() {
@@ -22,10 +23,11 @@ export function Home() {
           <h1>About us</h1>
           <Description>
             Culympics is a web platform design by college students to help our
-            users to find their next culinary experience.
+            users to find their next culinary experience during the Olympic
+            Games Paris 2024.
           </Description>
         </AboutUs>
-        <ExploreButton>EXPLORE</ExploreButton>
+        <NavLink to="/explore">EXPLORE</NavLink>
       </ContentContainer>
     </HomeContainer>
   )
