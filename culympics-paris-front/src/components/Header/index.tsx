@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom'
 import {
   HeaderContainer,
   Navbar,
-  SearchConteiner,
+  SearchContainer,
   Dropdown,
   SearchBar,
-  IconConteiner,
+  IconContainer,
 } from './styles'
 import { House, MagnifyingGlass } from 'phosphor-react'
 
@@ -23,16 +23,16 @@ export function Header() {
           <span>Home</span>
         </NavLink>
       </Navbar>
-      <SearchConteiner>
+      <SearchContainer>
         <Dropdown>
           <option value="restaurants">Restaurants</option>
           <option value="cuisines">Cuisines</option>
         </Dropdown>
         <SearchBar placeholder="Which restaurant are you looking for today?" />
-        <IconConteiner>
+        <IconContainer>
           <MagnifyingGlass size={20} />
-        </IconConteiner>
-      </SearchConteiner>
+        </IconContainer>
+      </SearchContainer>
     </HeaderContainer>
   )
 }

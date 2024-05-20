@@ -1,7 +1,7 @@
 import {
-  CardConteiner,
+  CardContainer,
   Banner,
-  InfoConteiner,
+  InfoContainer,
   Name,
   Address,
   Rating,
@@ -16,15 +16,15 @@ interface CardProps {
 
 export function RestaurantCard({ name, imageURL, address, rating }: CardProps) {
   return (
-    <CardConteiner>
+    <CardContainer>
       <Banner src={imageURL} />
-      <InfoConteiner>
+      <InfoContainer>
         <Name>{name}</Name>
         <Address>{address}</Address>
         <Rating>
           <b>{rating}</b> stars
         </Rating>
-      </InfoConteiner>
-    </CardConteiner>
+      </InfoContainer>
+    </CardContainer>
   )
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const CardConteiner = styled.div`
+export const CardContainer = styled.div`
   width: 100%;
   height: 100%;
 
@@ -8,6 +8,8 @@ export const CardConteiner = styled.div`
   flex-direction: column;
 
   border-radius: 10px;
+
+  cursor: pointer;
 `
 
 export const Banner = styled.img`
@@ -19,7 +21,7 @@ export const Banner = styled.img`
   object-fit: cover; /* This will ensure the image covers the square area without distortion */
 `
 
-export const InfoConteiner = styled.div`
+export const InfoContainer = styled.div`
   width: 100%;
   height: 30%;
 

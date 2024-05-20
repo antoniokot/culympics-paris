@@ -65,7 +65,7 @@ export const Navbar = styled.nav`
   }
 `
 
-export const SearchConteiner = styled.div`
+export const SearchContainer = styled.div`
   position: relative;
   width: 40%;
   height: 3.5rem;
@@ -108,7 +108,7 @@ export const SearchBar = styled.input`
   appearance: none;
 `
 
-export const IconConteiner = styled.div`
+export const IconContainer = styled.div`
   position: absolute;
   right: 10px; // Adjust based on your design needs
 

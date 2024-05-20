@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 
-export const ExploreConteiner = styled.div`
-  width: 100vw;
+export const ExploreContainer = styled.div`
+  width: 100%;
   height: 100%;
 
   display: flex;
   flex-direction: column;
+  gap: 10rem;
 `
 
-export const SectionConteiner = styled.section`
+export const SectionContainer = styled.section`
   width: 90%;
 
-  margin: auto;
+  margin: 4rem auto 0 auto;
 `
 
 export const SectionTitle = styled.h1`
