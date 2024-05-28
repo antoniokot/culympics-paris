@@ -1,9 +1,9 @@
 import { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
+
 import { MapContainer } from './styles'
 
-mapboxgl.accessToken =
-  'pk.eyJ1IjoiYW50b25pb2tvdCIsImEiOiJja21tYjRhNHAxamY0Mm9uMHMzajFya255In0.gT75e7X-5HTA0yGx0O2lMA'
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN
 
 export function Map() {
   const mapContainer = useRef(null)
