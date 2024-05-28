@@ -31,7 +31,7 @@ export const Navbar = styled.nav`
 
   gap: 10rem;
 
-  z-index: 100;
+  z-index: 1000;
 
   > img {
     position: absolute;
