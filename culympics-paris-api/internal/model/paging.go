@@ -1,8 +1,9 @@
 package model
 
 type Paging struct {
-	Page int64 `json:"page"`
-	Size int64 `json:"size"`
+	Page  int `json:"page"`
+	Size  int `json:"size"`
+	Total int `json:"total"`
 }
 
 type PagedResults struct {
