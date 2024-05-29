@@ -21,7 +21,9 @@ func NewRestaurant(RestaurantService RestaurantService) *Restaurant {
 }
 
 func (r Restaurant) Register(server *echo.Echo) {
-	server.GET("/restaurants", r.List)
+	v1 := server.Group("v1")
+
+	v1.GET("/restaurants", r.List)
 }
 
 func (r Restaurant) List(c echo.Context) error {

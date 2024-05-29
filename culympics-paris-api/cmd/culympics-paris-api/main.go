@@ -7,6 +7,8 @@ import (
 	"syscall"
 
 	"github.com/antoniokot/culympics-paris/culympics-paris-api/internal/api"
+	"github.com/antoniokot/culympics-paris/culympics-paris-api/internal/dao"
+	"github.com/antoniokot/culympics-paris/culympics-paris-api/internal/service"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
@@ -37,7 +39,14 @@ func main() {
 	server.Use(middleware.Gzip())
 	server.Pre(middleware.RemoveTrailingSlash())
 
+	// dao
+	restaurantDao := dao.NewRestaurant(pool)
+
+	// service
+	restaurantService := service.NewRestaurant(restaurantDao)
+
 	api.Health{}.Register(server)
+	api.NewRestaurant(restaurantService).Register(server)
 
 	// start HTTP server
 	go func() {

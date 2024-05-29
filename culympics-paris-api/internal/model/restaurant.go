@@ -16,6 +16,7 @@ type Restaurant struct {
 }
 
 type RestaurantListingFilters struct {
-	Paging
-	Country string `json:"country"`
+	Page    int    `json:"page" query:"page"`
+	Size    int    `json:"size" query:"size"`
+	Country string `json:"country" query:"country"`
 }

@@ -36,6 +36,7 @@ func (r Restaurant) List(ctx context.Context, filters model.RestaurantListingFil
 		dataQuery += fmt.Sprintf(" AND r.country = $%d", paramCount)
 		countQuery += fmt.Sprintf(" AND r.country = $%d", paramCount)
 		extraParams = append(extraParams, filters.Country)
+		paramCount++
 	}
 
 	// default limit size
@@ -81,7 +82,7 @@ func (r Restaurant) List(ctx context.Context, filters model.RestaurantListingFil
 
 	return result, model.Paging{
 		Page:  filters.Page,
-		Size:  filters.Size,
+		Size:  len(result),
 		Total: countingResult.Total,
 	}, nil
 }

@@ -22,7 +22,7 @@ func setConfigDefaults() {
 }
 
 func Init() *viper.Viper {
-	config.AddConfigPath("culympics-paris-api/internal/config/")
+	config.AddConfigPath("internal/config/")
 	config.SetConfigName("configuration")
 	config.SetConfigType("yml")
 
