@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/antoniokot/culympics-paris/culympics-paris-api/culympics-paris-api/internal/config"
+	"github.com/antoniokot/culympics-paris/culympics-paris-api/internal/config"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
