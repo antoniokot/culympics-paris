@@ -2,16 +2,17 @@ package main
 
 import (
 	"context"
-	"github.com/antoniokot/culympics-paris/culympics-paris-api/culympics-paris-api/internal/api"
-	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
-	"github.com/labstack/gommon/log"
 	"os"
 	"os/signal"
 	"syscall"
 
-	"github.com/antoniokot/culympics-paris/culympics-paris-api/culympics-paris-api/internal/config"
-	"github.com/antoniokot/culympics-paris/culympics-paris-api/culympics-paris-api/internal/pkg"
+	"github.com/antoniokot/culympics-paris/culympics-paris-api/internal/api"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
+	"github.com/labstack/gommon/log"
+
+	"github.com/antoniokot/culympics-paris/culympics-paris-api/internal/config"
+	"github.com/antoniokot/culympics-paris/culympics-paris-api/internal/pkg"
 )
 
 func main() {
