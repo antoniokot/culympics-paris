@@ -3,6 +3,7 @@ module github.com/antoniokot/culympics-paris/culympics-paris-api
 go 1.22.1
 
 require (
+	github.com/google/uuid v1.4.0
 	github.com/jackc/pgx/v5 v5.6.0
 	github.com/labstack/echo/v4 v4.12.0
 	github.com/labstack/gommon v0.4.2
