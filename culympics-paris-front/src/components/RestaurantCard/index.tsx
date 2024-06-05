@@ -8,10 +8,10 @@ import {
 } from './styles'
 
 interface CardProps {
-  name: string
-  imageURL: string
-  address: string
-  rating: number
+  readonly name: string
+  readonly imageURL: string
+  readonly address: string
+  readonly rating: number
 }
 
 export function RestaurantCard({ name, imageURL, address, rating }: CardProps) {

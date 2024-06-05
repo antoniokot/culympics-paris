@@ -10,7 +10,7 @@ import {
 } from './styles'
 import { House, MagnifyingGlass } from 'phosphor-react'
 
-import culympicsLogo from '../../assets/images/culympics-logo.svg'
+import culympicsLogo from '@/assets/images/culympics-logo.svg'
 
 export function Header() {
   return (

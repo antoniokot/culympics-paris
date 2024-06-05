@@ -5,12 +5,12 @@ import {
   SectionContent,
 } from './styles'
 
-import { RestaurantCard } from '../../components/RestaurantCard'
+import { RestaurantCard } from '@/components/RestaurantCard'
 
 import {
   mostSearchedRestaurants,
   betterReviewedRestaurants,
-} from '../../assets/data/restaurants'
+} from '@/assets/data/restaurants'
 
 export function Explore() {
   return (
