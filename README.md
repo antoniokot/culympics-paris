@@ -21,6 +21,8 @@ Essas APIs são regidas por uma espécie de Controller, que monitora as ações 
 
 ![Design Arquitetural](atividades/atividade_4/imagens/arquitetura.png)
 
+## Padrão de Projeto
+
 Expandindo a análise para o componente central da API REST, observamos a criação de um padrão de Projeto DAO, o Data Access Object.
 Desta forma, encapsulamos o acesso ao Banco de Dados dentro de uma classe DAO, separando as regras de negócio com o acesso direto ao nosso Banco.
 Assim, podemos alterar a persistência desses dados, sem atrapalhar a lógica de negócios utilizada. Imagine, por exemplo, que ao invés de um banco em um arquivo em CSV fosse, na verdade, um banco de dados realacional SQL. Nada disso importa para a lógica de negócio, apenas as informações retornadas que são relevantes. Com a DAO, essa divisão pode ser feita de forma direta e simplificada. 
