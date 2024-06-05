@@ -1,4 +1,4 @@
-FROM postgres:latest
+FROM postgres:16.3
 
 COPY restaurants.csv /docker-entrypoint-initdb.d/
 
