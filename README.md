@@ -15,7 +15,7 @@ Culympics é um projeto desenvolvido para auxiliar turistas durante os Jogos Ol�
 ## Arquitetura utilizada
 
 Para o desenvolvimento do projeto, foi utilizado o estilo arquitetural de REST API, detalhado na imagem abaixo.
-Foi criado uma aplicação Web criada em Rest, alimentada por um servidor desenvolvido em Golang.
+Foi criado uma Aplicação Web criada em React + TypeScript, alimentada por um servidor desenvolvido em Golang.
 As APIs consomem os dados contido em um arquivo CSV, criado a partir de buscas e pesquisas feitas virtualmente.
 Essas APIs são regidas por uma espécie de Controller, que monitora as ações correspondentes enviando as chamadas necessárias para o nosso DAO. 
 
