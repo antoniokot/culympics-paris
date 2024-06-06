@@ -6,10 +6,10 @@ import {
   MapContainer,
 } from './styles'
 
-import { Map } from '@/components/Map'
-import { RestaurantCard } from '@/components/RestaurantCard'
+import { Map } from '../../components/Map'
+import { RestaurantCard } from '../../components/RestaurantCard'
 
-import { betterReviewedRestaurants } from '@/assets/data/restaurants'
+import { betterReviewedRestaurants } from '../../assets/data/restaurants'
 
 export function Search() {
   return (

@@ -73,9 +73,9 @@ export const SearchContainer = styled.div`
   height: 3.5rem;
 
   display: grid;
-  grid-template-columns: 1fr 4fr; // Adjust the ratio according to your design needs
+  grid-template-columns: 1fr 4fr;
   align-items: center;
-  gap: 20px; // Adds some space between the dropdown and the search bar
+  gap: 20px;
 
   background: ${(props) => props.theme.white};
   border-radius: 40px;
@@ -86,7 +86,7 @@ export const SearchContainer = styled.div`
 `
 
 export const Dropdown = styled.select`
-  width: 100%; // Takes the full width of its grid area
+  width: 100%;
   height: 100%;
 
   border: none;
@@ -100,7 +100,7 @@ export const Dropdown = styled.select`
 `
 
 export const SearchBar = styled.input`
-  width: 100%; // Takes the full width of its grid area
+  width: 100%;
   height: 100%;
 
   color: ${(props) => props.theme.black};
@@ -112,11 +112,11 @@ export const SearchBar = styled.input`
 
 export const IconContainer = styled.div`
   position: absolute;
-  right: 10px; // Adjust based on your design needs
+  right: 10px;
 
   display: flex;
   align-items: center;
-  pointer-events: none; // Makes the icon non-
+  pointer-events: none;
 
   color: ${(props) => props.theme.white};
   background: ${(props) => props.theme.black};
