@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { Home } from './index'
 
 describe('when the page is loaded', () => {
-  // Render the component once before each test
   beforeAll(() => {
     render(
       <BrowserRouter>

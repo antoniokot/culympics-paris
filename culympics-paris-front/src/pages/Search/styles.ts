@@ -10,7 +10,7 @@ export const SearchContainer = styled.div`
 
 export const SectionContainer = styled.section`
   width: 60%;
-  max-height: 100vh; // Ensure it doesn't exceed the viewport height
+  max-height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -29,15 +29,12 @@ export const SectionContent = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 2rem;
-  // No additional overflow control needed here since it's managed by SectionContainer
 `
 
 export const MapContainer = styled.div`
   position: sticky;
-  top: 9.56rem; /* Replace 10remith the actual height of your Navbar */
+  top: 9.56rem;
   right: 0;
-  height: calc(
-    100vh - 9.56rem
-  ); /* Adjust the height to account for the Navbar */
+  height: calc(100vh - 9.56rem);
   width: 40%;
 `

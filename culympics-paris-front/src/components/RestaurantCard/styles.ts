@@ -15,10 +15,10 @@ export const CardContainer = styled.div`
 export const Banner = styled.img`
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1; /* New property to maintain aspect ratio as a square */
+  aspect-ratio: 1 / 1;
 
   border-radius: 8px;
-  object-fit: cover; /* This will ensure the image covers the square area without distortion */
+  object-fit: cover;
 `
 
 export const InfoContainer = styled.div`

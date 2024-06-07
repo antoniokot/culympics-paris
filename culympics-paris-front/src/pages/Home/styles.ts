@@ -23,7 +23,6 @@ export const ImageContainer = styled.div`
   background-position: center;
   background-size: cover;
 
-  /* Adding a pseudo-element to serve as an overlay */
   &::before {
     content: '';
     position: absolute;
@@ -34,7 +33,7 @@ export const ImageContainer = styled.div`
     background: ${(props) => props.theme.black};
     opacity: 0.6;
 
-    z-index: 1; /* Ensures the overlay is above the background image but below the content */
+    z-index: 1;
   }
 
   &::after {
@@ -42,14 +41,14 @@ export const ImageContainer = styled.div`
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0; /* Aligns the shadow at the bottom */
-    height: 30%; /* Adjust this value to control the height of the fade effect */
+    bottom: 0;
+    height: 30%;
     background: linear-gradient(
       to bottom,
       rgba(12, 12, 12, 0) 0%,
       ${(props) => props.theme.black} 100%
     );
-    z-index: 2; /* Ensures the shadow is above the background and the dark overlay */
+    z-index: 2;
   }
 `
 
@@ -62,7 +61,7 @@ export const WelcomeContainer = styled.div`
   align-items: center;
   text-align: center;
 
-  z-index: 2; /* Ensures content is above the overlay */
+  z-index: 2;
 `
 
 export const Welcome = styled.h1`
@@ -72,7 +71,7 @@ export const Welcome = styled.h1`
 `
 
 export const ContentContainer = styled.div`
-  position: relative; /* This ensures that the content is positioned relative to its parent and above the overlay */
+  position: relative;
 
   width: 100%;
   height: 20rem;
@@ -83,7 +82,7 @@ export const ContentContainer = styled.div`
 
   color: ${(props) => props.theme.black};
 
-  z-index: 2; /* Ensures content is above the overlay */
+  z-index: 2;
 
   > a {
     width: 10rem;

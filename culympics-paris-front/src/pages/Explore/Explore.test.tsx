@@ -4,7 +4,6 @@ import { expect, describe, it, beforeAll } from 'vitest'
 import { Explore } from './index'
 
 describe('when the page is loaded', () => {
-  // Render the component once before each test
   beforeAll(() => {
     render(<Explore />)
   })
