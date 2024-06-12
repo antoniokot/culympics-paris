@@ -6,6 +6,7 @@ import (
 	"math"
 
 	"github.com/antoniokot/culympics-paris/culympics-paris-api/internal/model"
+	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/pkg/errors"
 )
@@ -85,4 +86,18 @@ func (r Restaurant) List(ctx context.Context, filters model.RestaurantListingFil
 		Size:  len(result),
 		Total: countingResult.Total,
 	}, nil
+}
+
+func (r Restaurant) Fetch(ctx context.Context, id uuid.UUID) (model.Restaurant, error) {
+	query := `
+		SELECT ` + allRestaurantFields + ` FROM restaurants r WHERE r.id = $1
+	`
+
+	var item model.Restaurant
+	err := r.db.QueryRow(ctx, query, id).Scan(&item.Id, &item.Country, &item.Name, &item.Address, &item.ImageURL, &item.Description, &item.Latitude, &item.Longitude)
+	if err != nil {
+		return model.Restaurant{}, errors.Wrap(err, "Failed to fetch restaurant")
+	}
+
+	return item, nil
 }
