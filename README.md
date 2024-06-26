@@ -26,3 +26,26 @@ Essas APIs são regidas por uma espécie de Controller, que monitora as ações 
 Expandindo a análise para o componente central da API REST, observamos a criação de um padrão de Projeto DAO, o Data Access Object.
 Desta forma, encapsulamos o acesso ao Banco de Dados dentro de uma classe DAO, separando as regras de negócio com o acesso direto ao nosso Banco.
 Assim, podemos alterar a persistência desses dados, sem atrapalhar a lógica de negócios utilizada. Imagine, por exemplo, que ao invés de um banco em um arquivo em CSV fosse, na verdade, um banco de dados realacional SQL. Nada disso importa para a lógica de negócio, apenas as informações retornadas que são relevantes. Com a DAO, essa divisão pode ser feita de forma direta e simplificada. 
+
+
+## Como rodar o back-end
+Requisitos:
+- go 1.22.1
+- docker
+```sh
+    git clone git@github.com:antoniokot/culympics-paris.git
+    make build
+    cd culympics-paris-api
+    go run ./cmd/culympics-parus-api
+```
+
+## Como rodar o front-end
+Requisitos:
+-   node v20.11.1
+-   npm 10.2.4
+```sh
+    git clone git@github.com:antoniokot/culympics-paris.git
+    cd culympics-paris-front
+    npm install
+    npm start
+```
